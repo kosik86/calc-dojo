@@ -11,7 +11,7 @@ describe("CalcDojo", () => {
 
         it("should return the right result", () => {
 
-            expect(calc.calculate("1+2")).to.equal(3);
+            expect(calc.calculate("10+20")).to.equal(30);
 
         });
 
@@ -22,7 +22,7 @@ describe("CalcDojo", () => {
 
         it("should return the right result", () => {
 
-            expect(calc.calculate("1-2")).to.equal(-1);
+            expect(calc.calculate("100-20")).to.equal(80);
 
         });
 
@@ -33,7 +33,7 @@ describe("CalcDojo", () => {
 
         it("should return the right result", () => {
 
-            expect(calc.calculate("2*2")).to.equal(2);
+            expect(calc.calculate("20*2")).to.equal(40);
 
         });
 
@@ -42,11 +42,18 @@ describe("CalcDojo", () => {
 
     xdescribe("edge cases", () => {
 
-        it("should care about operators precedence", () => {
+        xit("should care about operators precedence", () => {
 
-            expect(calc.calculate("2+2*2")).to.equal(6);
+            expect(calc.calculate("20+20*20")).to.equal(420);
 
         });
+
+        xit("should ignore whitespaces", () => {
+
+            expect(calc.calculate("1 + 2  + 3")).to.equal(6);
+
+        });
+
 
     });
 
